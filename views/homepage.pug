@@ -1,0 +1,15 @@
+doctype html
+html 
+    head 
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body    
+        h1 Pals Database
+        a(href=`http://localhost:3000/`, style="margin-left: 20px;") Add New Pal
+        .cards 
+            each pal in data
+                .card 
+                    h2.card__name #{pal.properties.name} 
+                    p.card__no No: #{pal.properties.no}
+                    p.card__element Element: #{pal.properties.element}    
